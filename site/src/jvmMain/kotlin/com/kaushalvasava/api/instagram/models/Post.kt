@@ -1,4 +1,4 @@
-package com.kaushalvasava.apis.instagramapi.models
+package com.kaushalvasava.api.instagram.models
 
 import kotlinx.serialization.Serializable
 

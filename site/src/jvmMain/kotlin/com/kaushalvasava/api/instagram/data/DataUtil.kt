@@ -1,9 +1,9 @@
-package com.kaushalvasava.apis.instagramapi.data
+package com.kaushalvasava.api.instagram.data
 
-import com.kaushalvasava.apis.instagramapi.models.Notification
-import com.kaushalvasava.apis.instagramapi.models.Post
-import com.kaushalvasava.apis.instagramapi.models.Story
-import com.kaushalvasava.apis.instagramapi.models.User
+import com.kaushalvasava.api.instagram.models.Notification
+import com.kaushalvasava.api.instagram.models.Post
+import com.kaushalvasava.api.instagram.models.Story
+import com.kaushalvasava.api.instagram.models.User
 import java.util.*
 import kotlin.random.Random
 

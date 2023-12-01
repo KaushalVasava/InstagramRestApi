@@ -5,7 +5,6 @@ plugins {
     alias(libs.plugins.jetbrains.compose)
     alias(libs.plugins.kobweb.application)
     alias(libs.plugins.kotlin.serialization)
-    // alias(libs.plugins.kobwebx.markdown)
 }
 
 group = "com.kaushalvasava.api.instagram"
@@ -35,7 +34,6 @@ kotlin {
                 implementation(libs.kobweb.core)
                 implementation(libs.kobweb.silk)
                 implementation(libs.silk.icons.fa)
-                // implementation(libs.kobwebx.markdown)
             }
         }
         val jvmMain by getting {

@@ -1,4 +1,4 @@
-package com.kaushalvasava.apis.instagramapi.data
+package com.kaushalvasava.api.instagram.data
 
 object Images {
     object User {
