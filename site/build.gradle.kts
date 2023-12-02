@@ -4,7 +4,8 @@ plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.jetbrains.compose)
     alias(libs.plugins.kobweb.application)
-    alias(libs.plugins.kotlin.serialization)
+//    alias(libs.plugins.kotlin.serialization)
+    kotlin("plugin.serialization") version "1.9.21"
 }
 
 group = "com.kaushalvasava.api.instagram"

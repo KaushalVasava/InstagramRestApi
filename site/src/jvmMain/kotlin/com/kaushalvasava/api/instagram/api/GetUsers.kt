@@ -12,12 +12,14 @@ import kotlinx.serialization.json.Json
 suspend fun getUsers(context: ApiContext) {
     try {
         val users = getUser()
+        context.res.contentType = "application/json"
         context.res.setBodyText(
             Json.encodeToString<ApiResponse>(
                 ApiResponse.SuccessUser(users)
             )
         )
     } catch (e: Exception) {
+        context.res.contentType = "application/json"
         context.res.setBodyText(
             Json.encodeToString<ApiResponse>(
                 ApiResponse.Failed(e.message.toString())

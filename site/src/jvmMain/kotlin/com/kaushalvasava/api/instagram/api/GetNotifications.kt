@@ -11,12 +11,14 @@ import kotlinx.serialization.json.Json
 @Api(routeOverride = "notifications")
 suspend fun getNotifications(context: ApiContext) {
     try {
+        context.res.contentType = "application/json"
         context.res.setBodyText(
             Json.encodeToString<ApiResponse>(
                 ApiResponse.SuccessNotification(DataUtil.getNotifications())
             )
         )
     } catch (e: Exception) {
+        context.res.contentType = "application/json"
         context.res.setBodyText(
             Json.encodeToString<ApiResponse>(
                 ApiResponse.Failed(e.message.toString())
