@@ -11,12 +11,14 @@ import kotlinx.serialization.json.Json
 @Api(routeOverride = "stories")
 suspend fun getStories(context: ApiContext) {
     try {
+        context.res.contentType = "application/json"
         context.res.setBodyText(
             Json.encodeToString<ApiResponse>(
                 ApiResponse.SuccessStory(DataUtil.getStories())
             )
         )
     } catch (e: Exception) {
+        context.res.contentType = "application/json"
         context.res.setBodyText(
             Json.encodeToString<ApiResponse>(
                 ApiResponse.Failed(e.message.toString())
